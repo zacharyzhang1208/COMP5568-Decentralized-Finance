@@ -1,0 +1,105 @@
+.token-selector {
+  position: relative;
+}
+
+.token-selector-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 40px;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.token-selector-trigger:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.token-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.token-symbol {
+  font-weight: 500;
+  color: #212529;
+  font-size: 1rem;
+}
+
+.dropdown-arrow {
+  margin-left: 0.25rem;
+  color: #495057;
+  font-size: 0.8rem;
+}
+
+.token-selector-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 240px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1000;
+  padding: 0.5rem;
+}
+
+.token-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.token-option:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.token-option .token-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.token-option .token-symbol {
+  font-size: 1rem;
+}
+
+.token-option .token-name {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-left: auto;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .token-selector-trigger {
+    min-width: 100px;
+    padding: 0.5rem;
+  }
+
+  .token-selector-dropdown {
+    width: 200px;
+  }
+
+  .token-option {
+    padding: 0.625rem 0.875rem;
+  }
+
+  .token-option .token-name {
+    display: none;
+  }
+} 
